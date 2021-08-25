@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="140dp"
+    android:layout_height="160dp"
+    android:layout_gravity="center"
+    android:background="@color/logo_main"
+
+    >
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_poster_image"
+        android:layout_width="130dp"
+        android:layout_height="150dp"
+        android:layout_centerInParent="true"
+        app:cardCornerRadius="12dp">
+
+        <RelativeLayout
+            android:layout_width="130dp"
+            android:layout_height="150dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_poster_title"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_alignParentBottom="true"
+
+                app:cardCornerRadius="12dp">
+
+                <TextView
+                    android:id="@+id/tv_poster_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="Movie Title"
+                    android:textColor="@color/logo_main"
+                    android:textSize="12dp"
+                    android:textStyle="bold"></TextView>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_average_point"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:layout_above="@id/cv_poster_title"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="5dp"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:id="@+id/tv_average_point"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="7.3"
+                    android:textColor="@color/logo_main"
+                    android:textStyle="bold"
+
+                    ></TextView>
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:id="@+id/img_poster"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/logo_main_2"
+                android:scaleType="fitXY"></ImageView>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

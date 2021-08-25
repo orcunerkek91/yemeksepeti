@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/logo_main">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_movies_page"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        app:cardCornerRadius="12dp">
+
+        <EditText
+            android:id="@+id/et_movies_page"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="50dp"
+            android:background="@color/white"
+            android:hint="Film arayın..."
+            android:maxLength="30"
+            android:singleLine="true"></EditText>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_search"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center_vertical"
+            app:cardCornerRadius="12dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/logo_main_2"></ImageView>
+
+            <ImageView
+                android:id="@+id/img_search"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_baseline_send_24"></ImageView>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcv_movies"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/cv_movies_page"
+        android:layout_marginTop="10dp"
+        android:scrollbarSize="5dp"
+        android:scrollbarThumbVertical="@color/logo_main_2"
+        android:scrollbars="vertical"
+        tools:listitem="@layout/item_movie"></androidx.recyclerview.widget.RecyclerView>
+
+
+</RelativeLayout>
